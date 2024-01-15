@@ -19,7 +19,7 @@ parser.add_argument('--rnn_hidden_dim', default=500, type=int,
 parser.add_argument('--fcn_dim', default=256, type=int, help='Number of dimensions of the MLP hidden layer.')
 parser.add_argument('--val_num_graphs', default=3, type=int, help='Number of validation graphs.')
 parser.add_argument('--test_num_graphs', default=5, type=int, help='Number of test graphs.')
-parser.add_argument('--num_estimators', default=60, type=int, help='Number of members in ensemble learning.')
+parser.add_argument('--num_estimators', default=2, type=int, help='Number of members in ensemble learning.')
 parser.add_argument('--lookback', default=2, type=int, help='Lookback value in temporal encoder.')
 parser.add_argument('--learning_rate', default=0.0005, type=float, help='Learning rate of Adam optimizer.')
 parser.add_argument('--dropout', default=0.2, type=float, help='Dropout probability in MLP.')
@@ -122,7 +122,7 @@ def train():
         val_avg_acc = []
         for item in val_batch:
             with torch.no_grad():
-                val_graphs, val_feat_list, val_follow_splits, val_unfollow_splits, val_labels = get_window_data(item)
+                val_graphs, val_feat_list, val_unfollow_splits = get_window_data(item)
                 h_list = model(val_graphs, val_feat_list)
 
                 val_unlink_pos_score = sequence_model(val_unfollow_splits[0].to('cuda'), h_list)
