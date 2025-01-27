@@ -1,7 +1,7 @@
-## If  you use the data, code or idea of our work, please cite the following paper:
+## If  you use the data, code, or idea of from our work, please cite the following paper:
 
 
-@InProceedings{10.1007/978-3-031-78541-2_2,
+@InProceedings{farokhi-edgeup,
 author="Farokhi, Soheila
 and Foumani, Arash Azizian
 and Qi, Xiaojun
