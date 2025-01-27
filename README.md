@@ -1,7 +1,8 @@
 
 ![EDGE-UP Framework](https://github.com/DSAatUSU/edge-up/blob/main/Edge-Up.png?raw=true)
 
-[Link to the paper](https://link.springer.com/chapter/10.1007/978-3-031-78541-2_2){:target="_blank" rel="noopener"}
+[Link to the paper](https://link.springer.com/chapter/10.1007/978-3-031-78541-2_2)
+
 
 ## Citation:
 ### If  you use the data, code, or idea from our work, please cite the following paper:
